@@ -1,0 +1,19 @@
+{% block content %}
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class = 'form-group'>
+                <legend class="border-bottom mb-4">회원가입</legend>
+                {{ form.as_p }}
+
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">회원가입</button>
+
+            </div>
+        </form>
+        <div class="border-top pt-3">
+            <small class="text-muted">계정이 있으신가요? <a class="ml-2" href="{% url 'login' %}">로그인</a> </small>
+        </div>
+    </div>
+{% endblock content %}
